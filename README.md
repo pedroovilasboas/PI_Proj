@@ -1,5 +1,11 @@
 # Sistema de Gestão do Espaço Social
 
+Este projeto foi desenvolvido no âmbito da cadeira de Programação Imperativa do curso de Engenharia Sistemas Informáticos no Instituto Politecnico do Cavado e do Ave, pelos alunos:
+- Pedro Vilas Boas nº25453
+- Ricardo Marques nº25447
+
+## Sobre o Projeto
+
 Este é um sistema de gestão para um espaço social, desenvolvido em C. O sistema permite gerenciar funcionários, ementas e escolhas de refeições.
 
 ## Funcionalidades
@@ -21,13 +27,3 @@ Este é um sistema de gestão para um espaço social, desenvolvido em C. O siste
 - `ementas.txt` - Base de dados das ementas
 - `escolhas.txt` - Base de dados das escolhas dos utentes
 
-## Como Usar
-
-1. Compile o programa usando um compilador C
-2. Execute o programa
-3. Use o menu interativo para navegar entre as funcionalidades
-
-## Requisitos
-
-- Compilador C (GCC recomendado)
-- Sistema operacional Windows

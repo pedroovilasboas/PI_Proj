@@ -56,4 +56,5 @@ projeto/
 ## 📝 Notas Adicionais
 - O sistema foi desenvolvido com foco na eficiência e facilidade de utilização
 - Implementa boas práticas de programação e gestão de memória
-- Inclui validação de dados e tratamento de erros
+- Inclui validação de dados e tratamento de erros.
+

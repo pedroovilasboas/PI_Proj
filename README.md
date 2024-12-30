@@ -48,10 +48,6 @@ projeto/
 - Estruturas de dados personalizadas
 - Sistema de ficheiros para persistência de dados
 
-## 🚀 Instalação e Execução
-1. Clone o repositório
-2. Compile o projeto utilizando o comando make
-3. Execute o programa gerado
 
 ## 👥 Equipa
 - Pedro Vilas Boas (nº25453)

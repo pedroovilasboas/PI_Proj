@@ -44,7 +44,7 @@ projeto/
 
 ## 🛠️ Tecnologias Utilizadas
 - Linguagem C
-- Bibliotecas standard do C
+- Bibliotecas standard C
 - Estruturas de dados personalizadas
 - Sistema de ficheiros para persistência de dados
 

@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de Gestão do Espaço Social: Referência ao ficheiro src/include/estruturas.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema de Gestão do Espaço Social<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema para gestão de refeições e funcionários</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('estruturas_8h.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estruturas de Dados</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Definições de tipos</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência ao ficheiro estruturas.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div>
+<p><a href="estruturas_8h_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estruturas de Dados</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_funcionario.html">Funcionario</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrutura que representa um funcionário.  <a href="struct_funcionario.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_prato.html">Prato</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">@  <a href="struct_prato.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ementa.html">Ementa</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_escolha.html">Escolha</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_node_func.html">NodeFunc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrutura de nó para lista ligada de funcionários.  <a href="struct_node_func.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_node_ementa.html">NodeEmenta</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_node_escolha.html">NodeEscolha</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a650a929b45480c0875d8c814f442b6ac" id="r_a650a929b45480c0875d8c814f442b6ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a650a929b45480c0875d8c814f442b6ac">MAX_NOME</a>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:a650a929b45480c0875d8c814f442b6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842ed03f27719bc87666bfd1f75415b8" id="r_a842ed03f27719bc87666bfd1f75415b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a842ed03f27719bc87666bfd1f75415b8">MAX_LINE</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a842ed03f27719bc87666bfd1f75415b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Definições de tipos</h2></td></tr>
+<tr class="memitem:a0a1562228b73576987bdd1f62a3a8760" id="r_a0a1562228b73576987bdd1f62a3a8760"><td class="memItemLeft" align="right" valign="top">typedef struct NodeFunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a1562228b73576987bdd1f62a3a8760">NodeFunc</a></td></tr>
+<tr class="separator:a0a1562228b73576987bdd1f62a3a8760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43fc300e34ef164826c461427cf1d741" id="r_a43fc300e34ef164826c461427cf1d741"><td class="memItemLeft" align="right" valign="top">typedef struct NodeEmenta&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43fc300e34ef164826c461427cf1d741">NodeEmenta</a></td></tr>
+<tr class="separator:a43fc300e34ef164826c461427cf1d741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90aad828a97bf7af45b54cfaba30e97c" id="r_a90aad828a97bf7af45b54cfaba30e97c"><td class="memItemLeft" align="right" valign="top">typedef struct NodeEscolha&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90aad828a97bf7af45b54cfaba30e97c">NodeEscolha</a></td></tr>
+<tr class="separator:a90aad828a97bf7af45b54cfaba30e97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:aed0de4f7fab8605405ab6cdb09831a30" id="r_aed0de4f7fab8605405ab6cdb09831a30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_node_func.html">NodeFunc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed0de4f7fab8605405ab6cdb09831a30">criarNoFunc</a> (<a class="el" href="struct_funcionario.html">Funcionario</a> func)</td></tr>
+<tr class="memdesc:aed0de4f7fab8605405ab6cdb09831a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo nó para a lista de funcionários.  <br /></td></tr>
+<tr class="separator:aed0de4f7fab8605405ab6cdb09831a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31e0f5e88a2707effdce2d01c92a842" id="r_ab31e0f5e88a2707effdce2d01c92a842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_node_func.html">NodeFunc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31e0f5e88a2707effdce2d01c92a842">carregarFuncionarios</a> (const char *filename)</td></tr>
+<tr class="memdesc:ab31e0f5e88a2707effdce2d01c92a842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega dados dos funcionários a partir de um arquivo.  <br /></td></tr>
+<tr class="separator:ab31e0f5e88a2707effdce2d01c92a842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e9de86848b6f0ae79a7ff88249e810c" id="r_a4e9de86848b6f0ae79a7ff88249e810c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_node_ementa.html">NodeEmenta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e9de86848b6f0ae79a7ff88249e810c">carregarEmentas</a> (const char *filename)</td></tr>
+<tr class="memdesc:a4e9de86848b6f0ae79a7ff88249e810c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega dados das ementas a partir de um arquivo.  <br /></td></tr>
+<tr class="separator:a4e9de86848b6f0ae79a7ff88249e810c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e73aa8ed6b34ad81643b8c1fd366c9" id="r_a03e73aa8ed6b34ad81643b8c1fd366c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_node_escolha.html">NodeEscolha</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03e73aa8ed6b34ad81643b8c1fd366c9">carregarEscolhas</a> (const char *filename)</td></tr>
+<tr class="memdesc:a03e73aa8ed6b34ad81643b8c1fd366c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega as escolhas dos utentes a partir de um arquivo.  <br /></td></tr>
+<tr class="separator:a03e73aa8ed6b34ad81643b8c1fd366c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4698ced44ca34af8f4cbab08e93096" id="r_a8c4698ced44ca34af8f4cbab08e93096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4698ced44ca34af8f4cbab08e93096">listarRefeicoesDia</a> (<a class="el" href="struct_node_func.html">NodeFunc</a> *funcionarios, <a class="el" href="struct_node_ementa.html">NodeEmenta</a> *ementas, <a class="el" href="struct_node_escolha.html">NodeEscolha</a> *escolhas, const char *dia)</td></tr>
+<tr class="memdesc:a8c4698ced44ca34af8f4cbab08e93096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todas as refeições de um dia específico.  <br /></td></tr>
+<tr class="separator:a8c4698ced44ca34af8f4cbab08e93096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a895e7d30b3783289353cf0058a9b4599" id="r_a895e7d30b3783289353cf0058a9b4599"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a895e7d30b3783289353cf0058a9b4599">listarUtentesOrdenados</a> (<a class="el" href="struct_node_func.html">NodeFunc</a> *funcionarios, <a class="el" href="struct_node_escolha.html">NodeEscolha</a> *escolhas)</td></tr>
+<tr class="memdesc:a895e7d30b3783289353cf0058a9b4599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista os utentes ordenados por número de refeições.  <br /></td></tr>
+<tr class="separator:a895e7d30b3783289353cf0058a9b4599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c36012fd60deb0f410fd594d246bd2" id="r_a05c36012fd60deb0f410fd594d246bd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05c36012fd60deb0f410fd594d246bd2">listarRefeicoesCalorias</a> (<a class="el" href="struct_node_func.html">NodeFunc</a> *funcionarios, <a class="el" href="struct_node_ementa.html">NodeEmenta</a> *ementas, <a class="el" href="struct_node_escolha.html">NodeEscolha</a> *escolhas, int num_funcionario, const char *data_inicio, const char *data_fim)</td></tr>
+<tr class="memdesc:a05c36012fd60deb0f410fd594d246bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista as refeições e calorias consumidas por um utente.  <br /></td></tr>
+<tr class="separator:a05c36012fd60deb0f410fd594d246bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff0fc553daec9082bc572dc9b3a9613" id="r_a0ff0fc553daec9082bc572dc9b3a9613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ff0fc553daec9082bc572dc9b3a9613">calcularMediasCalorias</a> (<a class="el" href="struct_node_ementa.html">NodeEmenta</a> *ementas, <a class="el" href="struct_node_escolha.html">NodeEscolha</a> *escolhas, const char *data_inicio, const char *data_fim)</td></tr>
+<tr class="memdesc:a0ff0fc553daec9082bc572dc9b3a9613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula as médias de calorias consumidas por dia.  <br /></td></tr>
+<tr class="separator:a0ff0fc553daec9082bc572dc9b3a9613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a177d0507ce5a8acc08ccf117924ddcb2" id="r_a177d0507ce5a8acc08ccf117924ddcb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a177d0507ce5a8acc08ccf117924ddcb2">gerarTabelaSemanal</a> (<a class="el" href="struct_node_func.html">NodeFunc</a> *funcionarios, <a class="el" href="struct_node_ementa.html">NodeEmenta</a> *ementas, <a class="el" href="struct_node_escolha.html">NodeEscolha</a> *escolhas, int num_funcionario)</td></tr>
+<tr class="memdesc:a177d0507ce5a8acc08ccf117924ddcb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gera uma tabela semanal de refeições para um utente.  <br /></td></tr>
+<tr class="separator:a177d0507ce5a8acc08ccf117924ddcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f639c0af4d6573c22a3f68b28d38f0" id="r_a16f639c0af4d6573c22a3f68b28d38f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16f639c0af4d6573c22a3f68b28d38f0">liberarMemoria</a> (<a class="el" href="struct_node_func.html">NodeFunc</a> *funcionarios, <a class="el" href="struct_node_ementa.html">NodeEmenta</a> *ementas, <a class="el" href="struct_node_escolha.html">NodeEscolha</a> *escolhas)</td></tr>
+<tr class="memdesc:a16f639c0af4d6573c22a3f68b28d38f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera toda a memória alocada para as listas.  <br /></td></tr>
+<tr class="separator:a16f639c0af4d6573c22a3f68b28d38f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação das macros</h2>
+<a id="a842ed03f27719bc87666bfd1f75415b8" name="a842ed03f27719bc87666bfd1f75415b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842ed03f27719bc87666bfd1f75415b8">&#9670;&#160;</a></span>MAX_LINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_LINE&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a650a929b45480c0875d8c814f442b6ac" name="a650a929b45480c0875d8c814f442b6ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650a929b45480c0875d8c814f442b6ac">&#9670;&#160;</a></span>MAX_NOME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_NOME&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos tipos</h2>
+<a id="a43fc300e34ef164826c461427cf1d741" name="a43fc300e34ef164826c461427cf1d741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43fc300e34ef164826c461427cf1d741">&#9670;&#160;</a></span>NodeEmenta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct NodeEmenta NodeEmenta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90aad828a97bf7af45b54cfaba30e97c" name="a90aad828a97bf7af45b54cfaba30e97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90aad828a97bf7af45b54cfaba30e97c">&#9670;&#160;</a></span>NodeEscolha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct NodeEscolha NodeEscolha</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a1562228b73576987bdd1f62a3a8760" name="a0a1562228b73576987bdd1f62a3a8760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a1562228b73576987bdd1f62a3a8760">&#9670;&#160;</a></span>NodeFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct NodeFunc NodeFunc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a0ff0fc553daec9082bc572dc9b3a9613" name="a0ff0fc553daec9082bc572dc9b3a9613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ff0fc553daec9082bc572dc9b3a9613">&#9670;&#160;</a></span>calcularMediasCalorias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calcularMediasCalorias </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_node_ementa.html">NodeEmenta</a> *</td>          <td class="paramname"><span class="paramname"><em>ementas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_escolha.html">NodeEscolha</a> *</td>          <td class="paramname"><span class="paramname"><em>escolhas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>data_inicio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>data_fim</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula as médias de calorias consumidas por dia. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ementas</td><td>Lista de ementas </td></tr>
+    <tr><td class="paramname">escolhas</td><td>Lista de escolhas </td></tr>
+    <tr><td class="paramname">data_inicio</td><td>Data inicial do período </td></tr>
+    <tr><td class="paramname">data_fim</td><td>Data final do período</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Calcula e exibe a média de calorias consumidas por dia no período especificado </p>
+
+</div>
+</div>
+<a id="a4e9de86848b6f0ae79a7ff88249e810c" name="a4e9de86848b6f0ae79a7ff88249e810c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e9de86848b6f0ae79a7ff88249e810c">&#9670;&#160;</a></span>carregarEmentas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_node_ementa.html">NodeEmenta</a> * carregarEmentas </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carrega dados das ementas a partir de um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo contendo as ementas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>NodeEmenta* Ponteiro para o início da lista de ementas ou NULL em caso de erro</dd></dl>
+<p>Lê o arquivo CSV com dados das ementas e cria uma lista ligada O arquivo deve estar no formato: dia;data;prato_carne;calorias_carne;prato_peixe;calorias_peixe </p>
+
+</div>
+</div>
+<a id="a03e73aa8ed6b34ad81643b8c1fd366c9" name="a03e73aa8ed6b34ad81643b8c1fd366c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e73aa8ed6b34ad81643b8c1fd366c9">&#9670;&#160;</a></span>carregarEscolhas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_node_escolha.html">NodeEscolha</a> * carregarEscolhas </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carrega as escolhas dos utentes a partir de um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo contendo as escolhas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>NodeEscolha* Ponteiro para o início da lista de escolhas ou NULL em caso de erro</dd></dl>
+<p>Lê o arquivo CSV com as escolhas e cria uma lista ligada O arquivo deve estar no formato: dia;num_funcionario;tipo_prato </p>
+
+</div>
+</div>
+<a id="ab31e0f5e88a2707effdce2d01c92a842" name="ab31e0f5e88a2707effdce2d01c92a842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31e0f5e88a2707effdce2d01c92a842">&#9670;&#160;</a></span>carregarFuncionarios()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_node_func.html">NodeFunc</a> * carregarFuncionarios </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carrega dados dos funcionários a partir de um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo contendo os dados dos funcionários </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>NodeFunc* Ponteiro para o início da lista de funcionários ou NULL em caso de erro</dd></dl>
+<p>Lê o arquivo CSV com dados dos funcionários e cria uma lista ligada O arquivo deve estar no formato: numero;nome;nif;telefone </p>
+
+</div>
+</div>
+<a id="aed0de4f7fab8605405ab6cdb09831a30" name="aed0de4f7fab8605405ab6cdb09831a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0de4f7fab8605405ab6cdb09831a30">&#9670;&#160;</a></span>criarNoFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_node_func.html">NodeFunc</a> * criarNoFunc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_funcionario.html">Funcionario</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um novo nó para a lista de funcionários. </p>
+<p>Cria um novo nó de funcionário.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>Estrutura com os dados do funcionário </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>NodeFunc* Ponteiro para o novo nó criado ou NULL em caso de falha</dd></dl>
+<p>Aloca memória dinamicamente para um novo nó e inicializa seus campos </p>
+
+</div>
+</div>
+<a id="a177d0507ce5a8acc08ccf117924ddcb2" name="a177d0507ce5a8acc08ccf117924ddcb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a177d0507ce5a8acc08ccf117924ddcb2">&#9670;&#160;</a></span>gerarTabelaSemanal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gerarTabelaSemanal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_node_func.html">NodeFunc</a> *</td>          <td class="paramname"><span class="paramname"><em>funcionarios</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_ementa.html">NodeEmenta</a> *</td>          <td class="paramname"><span class="paramname"><em>ementas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_escolha.html">NodeEscolha</a> *</td>          <td class="paramname"><span class="paramname"><em>escolhas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_funcionario</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gera uma tabela semanal de refeições para um utente. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">funcionarios</td><td>Lista de funcionários </td></tr>
+    <tr><td class="paramname">ementas</td><td>Lista de ementas </td></tr>
+    <tr><td class="paramname">escolhas</td><td>Lista de escolhas </td></tr>
+    <tr><td class="paramname">num_funcionario</td><td>Número do funcionário</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Gera e exibe uma tabela com as escolhas de refeições do funcionário para a semana </p>
+
+</div>
+</div>
+<a id="a16f639c0af4d6573c22a3f68b28d38f0" name="a16f639c0af4d6573c22a3f68b28d38f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f639c0af4d6573c22a3f68b28d38f0">&#9670;&#160;</a></span>liberarMemoria()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void liberarMemoria </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_node_func.html">NodeFunc</a> *</td>          <td class="paramname"><span class="paramname"><em>funcionarios</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_ementa.html">NodeEmenta</a> *</td>          <td class="paramname"><span class="paramname"><em>ementas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_escolha.html">NodeEscolha</a> *</td>          <td class="paramname"><span class="paramname"><em>escolhas</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera toda a memória alocada para as listas. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">funcionarios</td><td>Ponteiro para a lista de funcionários </td></tr>
+    <tr><td class="paramname">ementas</td><td>Ponteiro para a lista de ementas </td></tr>
+    <tr><td class="paramname">escolhas</td><td>Ponteiro para a lista de escolhas</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Percorre todas as listas liberando a memória alocada para cada nó </p>
+
+</div>
+</div>
+<a id="a05c36012fd60deb0f410fd594d246bd2" name="a05c36012fd60deb0f410fd594d246bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c36012fd60deb0f410fd594d246bd2">&#9670;&#160;</a></span>listarRefeicoesCalorias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listarRefeicoesCalorias </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_node_func.html">NodeFunc</a> *</td>          <td class="paramname"><span class="paramname"><em>funcionarios</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_ementa.html">NodeEmenta</a> *</td>          <td class="paramname"><span class="paramname"><em>ementas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_escolha.html">NodeEscolha</a> *</td>          <td class="paramname"><span class="paramname"><em>escolhas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_funcionario</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>data_inicio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>data_fim</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista as refeições e calorias consumidas por um utente. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">funcionarios</td><td>Lista de funcionários </td></tr>
+    <tr><td class="paramname">ementas</td><td>Lista de ementas </td></tr>
+    <tr><td class="paramname">escolhas</td><td>Lista de escolhas </td></tr>
+    <tr><td class="paramname">num_funcionario</td><td>Número do funcionário </td></tr>
+    <tr><td class="paramname">data_inicio</td><td>Data inicial do período </td></tr>
+    <tr><td class="paramname">data_fim</td><td>Data final do período</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Mostra todas as refeições escolhidas por um funcionário em um período específico </p>
+
+</div>
+</div>
+<a id="a8c4698ced44ca34af8f4cbab08e93096" name="a8c4698ced44ca34af8f4cbab08e93096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c4698ced44ca34af8f4cbab08e93096">&#9670;&#160;</a></span>listarRefeicoesDia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listarRefeicoesDia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_node_func.html">NodeFunc</a> *</td>          <td class="paramname"><span class="paramname"><em>funcionarios</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_ementa.html">NodeEmenta</a> *</td>          <td class="paramname"><span class="paramname"><em>ementas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_escolha.html">NodeEscolha</a> *</td>          <td class="paramname"><span class="paramname"><em>escolhas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>dia</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista todas as refeições de um dia específico. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">funcionarios</td><td>Lista de funcionários </td></tr>
+    <tr><td class="paramname">ementas</td><td>Lista de ementas </td></tr>
+    <tr><td class="paramname">escolhas</td><td>Lista de escolhas </td></tr>
+    <tr><td class="paramname">dia</td><td>Dia para listar as refeições</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Mostra as escolhas de refeições feitas pelos funcionários em um determinado dia </p>
+
+</div>
+</div>
+<a id="a895e7d30b3783289353cf0058a9b4599" name="a895e7d30b3783289353cf0058a9b4599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895e7d30b3783289353cf0058a9b4599">&#9670;&#160;</a></span>listarUtentesOrdenados()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listarUtentesOrdenados </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_node_func.html">NodeFunc</a> *</td>          <td class="paramname"><span class="paramname"><em>funcionarios</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_node_escolha.html">NodeEscolha</a> *</td>          <td class="paramname"><span class="paramname"><em>escolhas</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista os utentes ordenados por número de refeições. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">funcionarios</td><td>Lista de funcionários </td></tr>
+    <tr><td class="paramname">escolhas</td><td>Lista de escolhas</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Ordena e exibe os funcionários com base no número de refeições escolhidas </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="estruturas_8h.html">estruturas.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.1 </li>
+  </ul>
+</div>
+</body>
+</html>

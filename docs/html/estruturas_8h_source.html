@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de Gestão do Espaço Social: Código-Fonte de src/include/estruturas.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema de Gestão do Espaço Social<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema para gestão de refeições e funcionários</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('estruturas_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">estruturas.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="estruturas_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ESTRUTURAS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ESTRUTURAS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="estruturas_8h.html#a650a929b45480c0875d8c814f442b6ac">    8</a></span><span class="preprocessor">#define MAX_NOME 50</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="estruturas_8h.html#a842ed03f27719bc87666bfd1f75415b8">    9</a></span><span class="preprocessor">#define MAX_LINE 256</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// Estrutura para Funcionário</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> numero;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">char</span> nome[<a class="code hl_define" href="estruturas_8h.html#a650a929b45480c0875d8c814f442b6ac">MAX_NOME</a>];</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_funcionario.html#adb3588df3f4231636f9df4b8b4a2453e">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_funcionario.html#a716cc49288ca3bf62128ddc40a468842">nif</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_funcionario.html#aa630e0b6d07568f34cdcbe38d59f6d75">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_funcionario.html#a27f11b9571d2ecfe21f47aa56f098e0e">telefone</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>} <a class="code hl_struct" href="struct_funcionario.html">Funcionario</a>;</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_prato.html">   23</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_prato.html#a60d0c2da895b3798a3639f00679d5bd3">   24</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_prato.html#a60d0c2da895b3798a3639f00679d5bd3">nome</a>[<a class="code hl_define" href="estruturas_8h.html#a650a929b45480c0875d8c814f442b6ac">MAX_NOME</a>];</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_prato.html#a9bda959b46d2b20b2ddbca71b3db937c">   25</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_prato.html#a9bda959b46d2b20b2ddbca71b3db937c">calorias</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <a class="code hl_struct" href="struct_prato.html">Prato</a>;</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// Estrutura para Ementa</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_ementa.html">   29</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_ementa.html#a1cdbeb06d1c794b7b060d899b266175b">   30</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_ementa.html#a1cdbeb06d1c794b7b060d899b266175b">dia</a>[10];</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_ementa.html#ae93d93652e790cab559d57b4bd942314">   31</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_ementa.html#ae93d93652e790cab559d57b4bd942314">data</a>[10];</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_ementa.html#a7a77461f58d1badc983c58edb6bd9b9b">   32</a></span>    <a class="code hl_struct" href="struct_prato.html">Prato</a> <a class="code hl_variable" href="struct_ementa.html#a7a77461f58d1badc983c58edb6bd9b9b">prato_carne</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_ementa.html#a1d451715ec076a09a47a391f8256c08a">   33</a></span>    <a class="code hl_struct" href="struct_prato.html">Prato</a> <a class="code hl_variable" href="struct_ementa.html#a1d451715ec076a09a47a391f8256c08a">prato_peixe</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <a class="code hl_struct" href="struct_ementa.html">Ementa</a>;</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// Estrutura para Escolha</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_escolha.html">   37</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_escolha.html#a8e4e19fabd09fdff4fb886e1a2d543d3">   38</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_escolha.html#a8e4e19fabd09fdff4fb886e1a2d543d3">dia</a>[10];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_escolha.html#a5af9d29ff8bdeb0855349eb89f42fd64">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_escolha.html#a5af9d29ff8bdeb0855349eb89f42fd64">num_funcionario</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_escolha.html#a80bca9023560de174c0a7f00ead7ee8d">   40</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_escolha.html#a80bca9023560de174c0a7f00ead7ee8d">tipo_prato</a>; <span class="comment">// &#39;C&#39; para carne, &#39;P&#39; para peixe</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <a class="code hl_struct" href="struct_escolha.html">Escolha</a>;</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// Nó para lista de funcionários</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_struct" href="struct_funcionario.html">Funcionario</a> <a class="code hl_variable" href="struct_node_func.html#ab421b9e64e2c9984f7a0f6418c2dbbb8">func</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* <a class="code hl_variable" href="struct_node_func.html#aa5d9dd10ec6c89c995afe8c95ebadb4c">prox</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="estruturas_8h.html#a0a1562228b73576987bdd1f62a3a8760">   47</a></span>} <a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// Nó para lista de ementas</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_node_ementa.html">   50</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_node_ementa.html#a53ddb5f9ef65e2fb269b6eb8a4821e2d">   51</a></span>    <a class="code hl_struct" href="struct_ementa.html">Ementa</a> <a class="code hl_variable" href="struct_node_ementa.html#a53ddb5f9ef65e2fb269b6eb8a4821e2d">ementa</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="struct_node_ementa.html#af58ba6d961d5b8df59a98f15009a863c">   52</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a>* <a class="code hl_variable" href="struct_node_ementa.html#af58ba6d961d5b8df59a98f15009a863c">prox</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="estruturas_8h.html#a43fc300e34ef164826c461427cf1d741">   53</a></span>} <a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a>;</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// Nó para lista de escolhas</span></div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_node_escolha.html">   56</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="struct_node_escolha.html#ad1ba741c7eea2d7ee463ed26d72714cd">   57</a></span>    <a class="code hl_struct" href="struct_escolha.html">Escolha</a> <a class="code hl_variable" href="struct_node_escolha.html#ad1ba741c7eea2d7ee463ed26d72714cd">escolha</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_node_escolha.html#abda55a918ddf8f80120d699bfcd986a8">   58</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>* <a class="code hl_variable" href="struct_node_escolha.html#abda55a918ddf8f80120d699bfcd986a8">prox</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="estruturas_8h.html#a90aad828a97bf7af45b54cfaba30e97c">   59</a></span>} <a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>;</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// Protótipos das funções</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* <a class="code hl_function" href="estruturas_8h.html#aed0de4f7fab8605405ab6cdb09831a30">criarNoFunc</a>(<a class="code hl_struct" href="struct_funcionario.html">Funcionario</a> func);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* <a class="code hl_function" href="estruturas_8h.html#ab31e0f5e88a2707effdce2d01c92a842">carregarFuncionarios</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a>* <a class="code hl_function" href="estruturas_8h.html#a4e9de86848b6f0ae79a7ff88249e810c">carregarEmentas</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>* <a class="code hl_function" href="estruturas_8h.html#a03e73aa8ed6b34ad81643b8c1fd366c9">carregarEscolhas</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="estruturas_8h.html#a8c4698ced44ca34af8f4cbab08e93096">listarRefeicoesDia</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* funcionarios, <a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a>* ementas, <a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>* escolhas, <span class="keyword">const</span> <span class="keywordtype">char</span>* dia);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="estruturas_8h.html#a895e7d30b3783289353cf0058a9b4599">listarUtentesOrdenados</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* funcionarios, <a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>* escolhas);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> <a class="code hl_function" href="estruturas_8h.html#a05c36012fd60deb0f410fd594d246bd2">listarRefeicoesCalorias</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* funcionarios, <a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a>* ementas, <a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>* escolhas, <span class="keywordtype">int</span> num_funcionario, <span class="keyword">const</span> <span class="keywordtype">char</span>* data_inicio, <span class="keyword">const</span> <span class="keywordtype">char</span>* data_fim);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="estruturas_8h.html#a0ff0fc553daec9082bc572dc9b3a9613">calcularMediasCalorias</a>(<a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a>* ementas, <a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>* escolhas, <span class="keyword">const</span> <span class="keywordtype">char</span>* data_inicio, <span class="keyword">const</span> <span class="keywordtype">char</span>* data_fim);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="estruturas_8h.html#a177d0507ce5a8acc08ccf117924ddcb2">gerarTabelaSemanal</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* funcionarios, <a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a>* ementas, <a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>* escolhas, <span class="keywordtype">int</span> num_funcionario);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> <a class="code hl_function" href="estruturas_8h.html#a16f639c0af4d6573c22a3f68b28d38f0">liberarMemoria</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* funcionarios, <a class="code hl_struct" href="struct_node_ementa.html">NodeEmenta</a>* ementas, <a class="code hl_struct" href="struct_node_escolha.html">NodeEscolha</a>* escolhas);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aestruturas_8h_html_a03e73aa8ed6b34ad81643b8c1fd366c9"><div class="ttname"><a href="estruturas_8h.html#a03e73aa8ed6b34ad81643b8c1fd366c9">carregarEscolhas</a></div><div class="ttdeci">NodeEscolha * carregarEscolhas(const char *filename)</div><div class="ttdoc">Carrega as escolhas dos utentes a partir de um arquivo.</div><div class="ttdef"><b>Definição</b> funcoes.c:199</div></div>
+<div class="ttc" id="aestruturas_8h_html_a05c36012fd60deb0f410fd594d246bd2"><div class="ttname"><a href="estruturas_8h.html#a05c36012fd60deb0f410fd594d246bd2">listarRefeicoesCalorias</a></div><div class="ttdeci">void listarRefeicoesCalorias(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas, int num_funcionario, const char *data_inicio, const char *data_fim)</div><div class="ttdoc">Lista as refeições e calorias consumidas por um utente.</div><div class="ttdef"><b>Definição</b> funcoes.c:427</div></div>
+<div class="ttc" id="aestruturas_8h_html_a0ff0fc553daec9082bc572dc9b3a9613"><div class="ttname"><a href="estruturas_8h.html#a0ff0fc553daec9082bc572dc9b3a9613">calcularMediasCalorias</a></div><div class="ttdeci">void calcularMediasCalorias(NodeEmenta *ementas, NodeEscolha *escolhas, const char *data_inicio, const char *data_fim)</div><div class="ttdoc">Calcula as médias de calorias consumidas por dia.</div><div class="ttdef"><b>Definição</b> funcoes.c:492</div></div>
+<div class="ttc" id="aestruturas_8h_html_a16f639c0af4d6573c22a3f68b28d38f0"><div class="ttname"><a href="estruturas_8h.html#a16f639c0af4d6573c22a3f68b28d38f0">liberarMemoria</a></div><div class="ttdeci">void liberarMemoria(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas)</div><div class="ttdoc">Libera toda a memória alocada para as listas.</div><div class="ttdef"><b>Definição</b> funcoes.c:278</div></div>
+<div class="ttc" id="aestruturas_8h_html_a177d0507ce5a8acc08ccf117924ddcb2"><div class="ttname"><a href="estruturas_8h.html#a177d0507ce5a8acc08ccf117924ddcb2">gerarTabelaSemanal</a></div><div class="ttdeci">void gerarTabelaSemanal(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas, int num_funcionario)</div><div class="ttdoc">Gera uma tabela semanal de refeições para um utente.</div><div class="ttdef"><b>Definição</b> funcoes.c:533</div></div>
+<div class="ttc" id="aestruturas_8h_html_a4e9de86848b6f0ae79a7ff88249e810c"><div class="ttname"><a href="estruturas_8h.html#a4e9de86848b6f0ae79a7ff88249e810c">carregarEmentas</a></div><div class="ttdeci">NodeEmenta * carregarEmentas(const char *filename)</div><div class="ttdoc">Carrega dados das ementas a partir de um arquivo.</div><div class="ttdef"><b>Definição</b> funcoes.c:105</div></div>
+<div class="ttc" id="aestruturas_8h_html_a650a929b45480c0875d8c814f442b6ac"><div class="ttname"><a href="estruturas_8h.html#a650a929b45480c0875d8c814f442b6ac">MAX_NOME</a></div><div class="ttdeci">#define MAX_NOME</div><div class="ttdef"><b>Definição</b> estruturas.h:8</div></div>
+<div class="ttc" id="aestruturas_8h_html_a895e7d30b3783289353cf0058a9b4599"><div class="ttname"><a href="estruturas_8h.html#a895e7d30b3783289353cf0058a9b4599">listarUtentesOrdenados</a></div><div class="ttdeci">void listarUtentesOrdenados(NodeFunc *funcionarios, NodeEscolha *escolhas)</div><div class="ttdoc">Lista os utentes ordenados por número de refeições.</div><div class="ttdef"><b>Definição</b> funcoes.c:360</div></div>
+<div class="ttc" id="aestruturas_8h_html_a8c4698ced44ca34af8f4cbab08e93096"><div class="ttname"><a href="estruturas_8h.html#a8c4698ced44ca34af8f4cbab08e93096">listarRefeicoesDia</a></div><div class="ttdeci">void listarRefeicoesDia(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas, const char *dia)</div><div class="ttdoc">Lista todas as refeições de um dia específico.</div><div class="ttdef"><b>Definição</b> funcoes.c:309</div></div>
+<div class="ttc" id="aestruturas_8h_html_ab31e0f5e88a2707effdce2d01c92a842"><div class="ttname"><a href="estruturas_8h.html#ab31e0f5e88a2707effdce2d01c92a842">carregarFuncionarios</a></div><div class="ttdeci">NodeFunc * carregarFuncionarios(const char *filename)</div><div class="ttdoc">Carrega dados dos funcionários a partir de um arquivo.</div><div class="ttdef"><b>Definição</b> funcoes.c:32</div></div>
+<div class="ttc" id="aestruturas_8h_html_aed0de4f7fab8605405ab6cdb09831a30"><div class="ttname"><a href="estruturas_8h.html#aed0de4f7fab8605405ab6cdb09831a30">criarNoFunc</a></div><div class="ttdeci">NodeFunc * criarNoFunc(Funcionario func)</div><div class="ttdoc">Cria um novo nó para a lista de funcionários.</div><div class="ttdef"><b>Definição</b> funcoes.c:16</div></div>
+<div class="ttc" id="astruct_ementa_html"><div class="ttname"><a href="struct_ementa.html">Ementa</a></div><div class="ttdef"><b>Definição</b> estruturas.h:29</div></div>
+<div class="ttc" id="astruct_ementa_html_a1cdbeb06d1c794b7b060d899b266175b"><div class="ttname"><a href="struct_ementa.html#a1cdbeb06d1c794b7b060d899b266175b">Ementa::dia</a></div><div class="ttdeci">char dia[10]</div><div class="ttdef"><b>Definição</b> estruturas.h:30</div></div>
+<div class="ttc" id="astruct_ementa_html_a1d451715ec076a09a47a391f8256c08a"><div class="ttname"><a href="struct_ementa.html#a1d451715ec076a09a47a391f8256c08a">Ementa::prato_peixe</a></div><div class="ttdeci">Prato prato_peixe</div><div class="ttdef"><b>Definição</b> estruturas.h:33</div></div>
+<div class="ttc" id="astruct_ementa_html_a7a77461f58d1badc983c58edb6bd9b9b"><div class="ttname"><a href="struct_ementa.html#a7a77461f58d1badc983c58edb6bd9b9b">Ementa::prato_carne</a></div><div class="ttdeci">Prato prato_carne</div><div class="ttdef"><b>Definição</b> estruturas.h:32</div></div>
+<div class="ttc" id="astruct_ementa_html_ae93d93652e790cab559d57b4bd942314"><div class="ttname"><a href="struct_ementa.html#ae93d93652e790cab559d57b4bd942314">Ementa::data</a></div><div class="ttdeci">char data[10]</div><div class="ttdef"><b>Definição</b> estruturas.h:31</div></div>
+<div class="ttc" id="astruct_escolha_html"><div class="ttname"><a href="struct_escolha.html">Escolha</a></div><div class="ttdef"><b>Definição</b> estruturas.h:37</div></div>
+<div class="ttc" id="astruct_escolha_html_a5af9d29ff8bdeb0855349eb89f42fd64"><div class="ttname"><a href="struct_escolha.html#a5af9d29ff8bdeb0855349eb89f42fd64">Escolha::num_funcionario</a></div><div class="ttdeci">int num_funcionario</div><div class="ttdef"><b>Definição</b> estruturas.h:39</div></div>
+<div class="ttc" id="astruct_escolha_html_a80bca9023560de174c0a7f00ead7ee8d"><div class="ttname"><a href="struct_escolha.html#a80bca9023560de174c0a7f00ead7ee8d">Escolha::tipo_prato</a></div><div class="ttdeci">char tipo_prato</div><div class="ttdef"><b>Definição</b> estruturas.h:40</div></div>
+<div class="ttc" id="astruct_escolha_html_a8e4e19fabd09fdff4fb886e1a2d543d3"><div class="ttname"><a href="struct_escolha.html#a8e4e19fabd09fdff4fb886e1a2d543d3">Escolha::dia</a></div><div class="ttdeci">char dia[10]</div><div class="ttdef"><b>Definição</b> estruturas.h:38</div></div>
+<div class="ttc" id="astruct_funcionario_html"><div class="ttname"><a href="struct_funcionario.html">Funcionario</a></div><div class="ttdoc">Estrutura que representa um funcionário.</div><div class="ttdef"><b>Definição</b> funcionarios.h:18</div></div>
+<div class="ttc" id="astruct_funcionario_html_a27f11b9571d2ecfe21f47aa56f098e0e"><div class="ttname"><a href="struct_funcionario.html#a27f11b9571d2ecfe21f47aa56f098e0e">Funcionario::telefone</a></div><div class="ttdeci">char telefone[15]</div><div class="ttdef"><b>Definição</b> funcionarios.h:22</div></div>
+<div class="ttc" id="astruct_funcionario_html_a716cc49288ca3bf62128ddc40a468842"><div class="ttname"><a href="struct_funcionario.html#a716cc49288ca3bf62128ddc40a468842">Funcionario::nif</a></div><div class="ttdeci">char nif[10]</div><div class="ttdef"><b>Definição</b> funcionarios.h:21</div></div>
+<div class="ttc" id="astruct_node_ementa_html"><div class="ttname"><a href="struct_node_ementa.html">NodeEmenta</a></div><div class="ttdef"><b>Definição</b> estruturas.h:50</div></div>
+<div class="ttc" id="astruct_node_ementa_html_a53ddb5f9ef65e2fb269b6eb8a4821e2d"><div class="ttname"><a href="struct_node_ementa.html#a53ddb5f9ef65e2fb269b6eb8a4821e2d">NodeEmenta::ementa</a></div><div class="ttdeci">Ementa ementa</div><div class="ttdef"><b>Definição</b> estruturas.h:51</div></div>
+<div class="ttc" id="astruct_node_ementa_html_af58ba6d961d5b8df59a98f15009a863c"><div class="ttname"><a href="struct_node_ementa.html#af58ba6d961d5b8df59a98f15009a863c">NodeEmenta::prox</a></div><div class="ttdeci">struct NodeEmenta * prox</div><div class="ttdef"><b>Definição</b> estruturas.h:52</div></div>
+<div class="ttc" id="astruct_node_escolha_html"><div class="ttname"><a href="struct_node_escolha.html">NodeEscolha</a></div><div class="ttdef"><b>Definição</b> estruturas.h:56</div></div>
+<div class="ttc" id="astruct_node_escolha_html_abda55a918ddf8f80120d699bfcd986a8"><div class="ttname"><a href="struct_node_escolha.html#abda55a918ddf8f80120d699bfcd986a8">NodeEscolha::prox</a></div><div class="ttdeci">struct NodeEscolha * prox</div><div class="ttdef"><b>Definição</b> estruturas.h:58</div></div>
+<div class="ttc" id="astruct_node_escolha_html_ad1ba741c7eea2d7ee463ed26d72714cd"><div class="ttname"><a href="struct_node_escolha.html#ad1ba741c7eea2d7ee463ed26d72714cd">NodeEscolha::escolha</a></div><div class="ttdeci">Escolha escolha</div><div class="ttdef"><b>Definição</b> estruturas.h:57</div></div>
+<div class="ttc" id="astruct_node_func_html"><div class="ttname"><a href="struct_node_func.html">NodeFunc</a></div><div class="ttdoc">Estrutura de nó para lista ligada de funcionários.</div><div class="ttdef"><b>Definição</b> funcionarios.h:28</div></div>
+<div class="ttc" id="astruct_node_func_html_aa5d9dd10ec6c89c995afe8c95ebadb4c"><div class="ttname"><a href="struct_node_func.html#aa5d9dd10ec6c89c995afe8c95ebadb4c">NodeFunc::prox</a></div><div class="ttdeci">struct NodeFunc * prox</div><div class="ttdef"><b>Definição</b> funcionarios.h:30</div></div>
+<div class="ttc" id="astruct_node_func_html_ab421b9e64e2c9984f7a0f6418c2dbbb8"><div class="ttname"><a href="struct_node_func.html#ab421b9e64e2c9984f7a0f6418c2dbbb8">NodeFunc::func</a></div><div class="ttdeci">Funcionario func</div><div class="ttdef"><b>Definição</b> funcionarios.h:29</div></div>
+<div class="ttc" id="astruct_prato_html"><div class="ttname"><a href="struct_prato.html">Prato</a></div><div class="ttdoc">@</div><div class="ttdef"><b>Definição</b> estruturas.h:23</div></div>
+<div class="ttc" id="astruct_prato_html_a60d0c2da895b3798a3639f00679d5bd3"><div class="ttname"><a href="struct_prato.html#a60d0c2da895b3798a3639f00679d5bd3">Prato::nome</a></div><div class="ttdeci">char nome[MAX_NOME]</div><div class="ttdef"><b>Definição</b> estruturas.h:24</div></div>
+<div class="ttc" id="astruct_prato_html_a9bda959b46d2b20b2ddbca71b3db937c"><div class="ttname"><a href="struct_prato.html#a9bda959b46d2b20b2ddbca71b3db937c">Prato::calorias</a></div><div class="ttdeci">int calorias</div><div class="ttdef"><b>Definição</b> estruturas.h:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="estruturas_8h.html">estruturas.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+# Nome do projeto
+PROJECT_NAME           = "Sistema de Gestão do Espaço Social"
+
+# Versão do projeto
+PROJECT_NUMBER         = 1.0
+
+# Breve descrição do projeto
+PROJECT_BRIEF         = "Sistema para gestão de refeições e funcionários"
+
+# Diretórios de entrada
+INPUT                 = src/
+INPUT_ENCODING        = UTF-8
+FILE_PATTERNS         = *.c *.h
+
+# Diretório de saída
+OUTPUT_DIRECTORY      = docs
+
+# Gerar documentação em HTML
+GENERATE_HTML         = YES
+HTML_OUTPUT           = html
+
+# Gerar documentação em LaTeX
+GENERATE_LATEX        = YES
+LATEX_OUTPUT         = latex
+
+# Extrair tudo
+EXTRACT_ALL          = YES
+EXTRACT_PRIVATE      = YES
+EXTRACT_STATIC       = YES
+
+# Idioma
+OUTPUT_LANGUAGE      = Portuguese
+
+# Gerar gráficos
+HAVE_DOT             = NO
+
+# Mostrar includes nos gráficos
+INCLUDE_GRAPH        = YES
+INCLUDED_BY_GRAPH    = YES
+
+# Processar todos os comentários
+RECURSIVE            = YES
+OPTIMIZE_OUTPUT_FOR_C = YES
+
+# Extrair documentação mesmo sem comentários especiais
+EXTRACT_ALL          = YES
+
+# Mostrar warnings sobre documentação
+WARN_IF_UNDOCUMENTED = YES
+WARN_IF_DOC_ERROR    = YES

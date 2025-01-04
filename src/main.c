@@ -1,21 +1,46 @@
+/**
+ * @file main.c
+ * @brief Sistema de Gestão do Espaço Social
+ * @author [Seu Nome]
+ * @date 2025-01-04
+ */
+
 #include "estruturas.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// Funcao para limpar o buffer do teclado
+/**
+ * @brief Limpa o buffer do teclado
+ * @details Remove caracteres residuais do buffer de entrada
+ */
 void limparBuffer() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
-// Funcao para pausar e esperar Enter
+/**
+ * @brief Pausa a execução do programa até que o usuário pressione Enter
+ * @details Exibe uma mensagem e aguarda input do usuário
+ */
 void pausar() {
     printf("\nPressione Enter para continuar...");
     limparBuffer();
     getchar();
 }
 
+/**
+ * @brief Função principal do programa
+ * @return 0 em caso de sucesso, outro valor em caso de erro
+ * @details Implementa o menu principal do sistema com as seguintes funcionalidades:
+ *          - Carregamento de dados de funcionários
+ *          - Carregamento de ementas semanais
+ *          - Carregamento de escolhas dos utentes
+ *          - Listagem de refeições por dia
+ *          - Listagem de utentes ordenados
+ *          - Consulta de refeições por utente
+ *          - Cálculo de médias de calorias
+ */
 int main() {
     int opcao;
     NodeFunc* funcionarios = NULL;

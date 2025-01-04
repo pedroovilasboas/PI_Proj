@@ -1,6 +1,18 @@
+/**
+ * @file funcoes.c
+ * @brief Implementação das funções do sistema de gestão do espaço social
+ * @author [Seu Nome]
+ * @date 2025-01-04
+ */
+
 #include "estruturas.h"
 
-// Funcao para criar novo no de funcionario
+/**
+ * @brief Cria um novo nó para a lista de funcionários
+ * @param func Estrutura com os dados do funcionário
+ * @return NodeFunc* Ponteiro para o novo nó criado ou NULL em caso de falha
+ * @details Aloca memória dinamicamente para um novo nó e inicializa seus campos
+ */
 NodeFunc* criarNoFunc(Funcionario func) {
     NodeFunc* novoNo = (NodeFunc*)malloc(sizeof(NodeFunc));
     if (novoNo != NULL) {
@@ -10,7 +22,13 @@ NodeFunc* criarNoFunc(Funcionario func) {
     return novoNo;
 }
 
-// Funcao para carregar funcionarios do arquivo
+/**
+ * @brief Carrega dados dos funcionários a partir de um arquivo
+ * @param filename Nome do arquivo contendo os dados dos funcionários
+ * @return NodeFunc* Ponteiro para o início da lista de funcionários ou NULL em caso de erro
+ * @details Lê o arquivo CSV com dados dos funcionários e cria uma lista ligada
+ *          O arquivo deve estar no formato: numero;nome;nif;telefone
+ */
 NodeFunc* carregarFuncionarios(const char* filename) {
     printf("\n+================================================+\n");
     printf("|           Carregando Funcionarios               |\n");
@@ -77,7 +95,13 @@ NodeFunc* carregarFuncionarios(const char* filename) {
     return head;
 }
 
-// Funcao para carregar ementas do arquivo
+/**
+ * @brief Carrega dados das ementas a partir de um arquivo
+ * @param filename Nome do arquivo contendo as ementas
+ * @return NodeEmenta* Ponteiro para o início da lista de ementas ou NULL em caso de erro
+ * @details Lê o arquivo CSV com dados das ementas e cria uma lista ligada
+ *          O arquivo deve estar no formato: dia;data;prato_carne;calorias_carne;prato_peixe;calorias_peixe
+ */
 NodeEmenta* carregarEmentas(const char* filename) {
     printf("\n+================================================+\n");
     printf("|              Carregando Ementas                 |\n");
@@ -165,7 +189,13 @@ NodeEmenta* carregarEmentas(const char* filename) {
     return head;
 }
 
-// Funcao para carregar escolhas do arquivo
+/**
+ * @brief Carrega as escolhas dos utentes a partir de um arquivo
+ * @param filename Nome do arquivo contendo as escolhas
+ * @return NodeEscolha* Ponteiro para o início da lista de escolhas ou NULL em caso de erro
+ * @details Lê o arquivo CSV com as escolhas e cria uma lista ligada
+ *          O arquivo deve estar no formato: dia;num_funcionario;tipo_prato
+ */
 NodeEscolha* carregarEscolhas(const char* filename) {
     printf("\n+----------------------------------------+\n");
     printf("|        Carregando Escolhas              |\n");
@@ -238,7 +268,13 @@ NodeEscolha* carregarEscolhas(const char* filename) {
     return head;
 }
 
-// Funcao para liberar memoria alocada
+/**
+ * @brief Libera toda a memória alocada para as listas
+ * @param funcionarios Ponteiro para a lista de funcionários
+ * @param ementas Ponteiro para a lista de ementas
+ * @param escolhas Ponteiro para a lista de escolhas
+ * @details Percorre todas as listas liberando a memória alocada para cada nó
+ */
 void liberarMemoria(NodeFunc* funcionarios, NodeEmenta* ementas, NodeEscolha* escolhas) {
     // Liberar lista de funcionarios
     while (funcionarios) {
@@ -262,8 +298,14 @@ void liberarMemoria(NodeFunc* funcionarios, NodeEmenta* ementas, NodeEscolha* es
     }
 }
 
-
-// Funcao para listar refeicoes de um dia especifico
+/**
+ * @brief Lista todas as refeições de um dia específico
+ * @param funcionarios Lista de funcionários
+ * @param ementas Lista de ementas
+ * @param escolhas Lista de escolhas
+ * @param dia Dia para listar as refeições
+ * @details Mostra as escolhas de refeições feitas pelos funcionários em um determinado dia
+ */
 void listarRefeicoesDia(NodeFunc* funcionarios, NodeEmenta* ementas, NodeEscolha* escolhas, const char* dia) {
     printf("\n+============================================+\n");
     printf("|        Refeicoes para %-10s          |\n", dia);
@@ -309,7 +351,12 @@ void listarRefeicoesDia(NodeFunc* funcionarios, NodeEmenta* ementas, NodeEscolha
     printf("+============================================+\n");
 }
 
-// Funcao para listar utentes ordenados por numero de refeicoes
+/**
+ * @brief Lista os utentes ordenados por número de refeições
+ * @param funcionarios Lista de funcionários
+ * @param escolhas Lista de escolhas
+ * @details Ordena e exibe os funcionários com base no número de refeições escolhidas
+ */
 void listarUtentesOrdenados(NodeFunc* funcionarios, NodeEscolha* escolhas) {
     printf("\n+================================================+\n");
     printf("|           Resumo de Consumo por Utente          |\n");
@@ -367,7 +414,16 @@ void listarUtentesOrdenados(NodeFunc* funcionarios, NodeEscolha* escolhas) {
     free(contagem);
 }
 
-// Funcao para listar refeicoes e calorias de um utente
+/**
+ * @brief Lista as refeições e calorias consumidas por um utente
+ * @param funcionarios Lista de funcionários
+ * @param ementas Lista de ementas
+ * @param escolhas Lista de escolhas
+ * @param num_funcionario Número do funcionário
+ * @param data_inicio Data inicial do período
+ * @param data_fim Data final do período
+ * @details Mostra todas as refeições escolhidas por um funcionário em um período específico
+ */
 void listarRefeicoesCalorias(NodeFunc* funcionarios, NodeEmenta* ementas, NodeEscolha* escolhas, 
                             int num_funcionario, const char* data_inicio, const char* data_fim) {
     NodeFunc* func = funcionarios;
@@ -425,7 +481,14 @@ void listarRefeicoesCalorias(NodeFunc* funcionarios, NodeEmenta* ementas, NodeEs
     printf("------------------------------------------\n");
 }
 
-// Funcao para calcular medias de calorias por dia
+/**
+ * @brief Calcula as médias de calorias consumidas por dia
+ * @param ementas Lista de ementas
+ * @param escolhas Lista de escolhas
+ * @param data_inicio Data inicial do período
+ * @param data_fim Data final do período
+ * @details Calcula e exibe a média de calorias consumidas por dia no período especificado
+ */
 void calcularMediasCalorias(NodeEmenta* ementas, NodeEscolha* escolhas, 
                            const char* data_inicio, const char* data_fim) {
     printf("\n=== Media de Calorias por Dia ===\n");
@@ -459,7 +522,14 @@ void calcularMediasCalorias(NodeEmenta* ementas, NodeEscolha* escolhas,
     printf("---------------------------\n");
 }
 
-// Funcao para gerar tabela semanal de um utente
+/**
+ * @brief Gera uma tabela semanal de refeições para um utente
+ * @param funcionarios Lista de funcionários
+ * @param ementas Lista de ementas
+ * @param escolhas Lista de escolhas
+ * @param num_funcionario Número do funcionário
+ * @details Gera e exibe uma tabela com as escolhas de refeições do funcionário para a semana
+ */
 void gerarTabelaSemanal(NodeFunc* funcionarios, NodeEmenta* ementas, NodeEscolha* escolhas, 
                         int num_funcionario) {
     NodeFunc* func = funcionarios;

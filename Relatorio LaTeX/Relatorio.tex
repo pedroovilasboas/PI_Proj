@@ -1,0 +1,433 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{float}
+
+% Configuração do hyperref para hiperligações coloridas
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=red
+}
+
+% Configuração do listings para código fonte
+\lstset{
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    breaklines=true,
+    frame=single,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    tabsize=2,
+    inputencoding=utf8,
+    extendedchars=true,
+	escapeinside={(*@}{@*)}
+   ,literate={á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {â}{{\^a}}1
+             {é}{{\'e}}1 {ê}{{\^e}}1
+             {í}{{\'i}}1 {ì}{{\`i}}1
+             {ó}{{\'o}}1 {õ}{{\~o}}1 {ô}{{\^o}}1
+             {ú}{{\'u}}1 {ü}{{\"u}}1
+             {ç}{{\c{c}}}1
+             {_}{{\textunderscore}}1
+}
+
+\begin{document}
+
+\title{Sistema de Gestão do Espaço Social\\
+       \large Relatório Técnico}
+\author{Pedro Vilas Boas - 25453 \\ Ricardo Marques - 25447}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+Este trabalho apresenta o desenvolvimento de um sistema de gestão do espaço social, implementado em linguagem C. O sistema foi desenvolvido como parte da unidade curricular de Laboratórios de Informática, com foco em boas práticas de programação e estruturas de dados eficientes. O projeto utiliza estruturas de dados dinâmicas (listas ligadas) para gerir informações sobre funcionários, ementas e escolhas de refeições. São apresentadas as principais funcionalidades implementadas, incluindo gestão de funcionários, controlo de refeições e cálculo de médias de calorias, bem como os algoritmos e estruturas de dados utilizados em cada componente do sistema.
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+%\lstlistoflistings
+
+\chapter{Introdução}
+\section{Objectivos}
+Este trabalho representa a continuação e evolução do projeto desenvolvido na Unidade Curricular de Programação Imperativa, agora no contexto da disciplina de Laboratórios Informáticos. O objectivo principal é melhorar e expandir o sistema anteriormente desenvolvido, aplicando conceitos avançados de desenvolvimento de programação e boas práticas de engenharia.
+
+\section{Descrição do Sistema}
+O sistema de gestão do espaço social foi desenvolvido para satisfazer as necessidades de controlo e organização de refeições num ambiente empresarial. O projecto foi implementado em linguagem C, utilizando conceitos avançados de programação como alocação dinâmica de memória, estruturas de dados ligadas e manipulação de ficheiros.
+
+\subsection{Funcionalidades Principais}
+\begin{enumerate}
+    \item \textbf{Gestão de Funcionários}
+    \begin{itemize}
+        \item Carregar dados de funcionários
+        \item Listar informações dos funcionários
+    \end{itemize}
+
+    \item \textbf{Controlo de Ementas}
+    \begin{itemize}
+        \item Carregar dados de ementas
+        \item Listar informações de ementas
+    \end{itemize}
+
+    \item \textbf{Gestão de Escolhas}
+    \begin{itemize}
+        \item Carregar dados de escolhas dos funcionários
+        \item Listar refeições por dia
+        \item Listar utentes ordenados
+        \item Consultar refeições de um utente
+        \item Calcular médias de calorias
+    \end{itemize}
+\end{enumerate}
+
+\chapter{Desenvolvimento}
+\section{Descrição do Problema}
+O problema a ser resolvido envolve a criação de um sistema de gestão do espaço social. O sistema deve permitir a entrada de dados através de ficheiros de texto, oferecendo funcionalidades como listagem de refeições, consulta de refeições por utente, e cálculo de médias de calorias.
+
+\section{Estruturas de Dados}
+O sistema utiliza estruturas de dados dinâmicas para gerir as informações de forma eficiente. As principais estruturas implementadas são:
+
+\subsection{Estrutura de Funcionários}
+A estrutura de funcionários armazena informações básicas sobre cada funcionário do sistema:
+
+\begin{lstlisting}[caption={Estrutura de dados para Funcionários},label=lst:funcionario]
+typedef struct {
+    int numero;        // Número único do funcionário
+    char nome[50];     // Nome completo
+    int nif;          // Número de Identificação Fiscal
+    int telefone;     // Número de telefone
+} Funcionario;
+\end{lstlisting}
+\noindent
+A estrutura do nó da lista encadeada para funcionários é definida da seguinte forma:
+\begin{lstlisting}[caption={Estrutura do Nó da Lista de Funcionários},label=lst:noFuncionario]
+typedef struct NodeFunc {
+    Funcionario func;           // Dados do funcionário
+    struct NodeFunc* prox;      // Ponteiro para o próximo nó
+} NodeFunc;
+\end{lstlisting}
+
+\subsection{Estrutura de Ementas}
+Para gerir as ementas diárias, foi implementada a seguinte estrutura:
+
+\begin{lstlisting}[caption={Estrutura de dados para Ementas},label=lst:ementa]
+typedef struct {
+    char dia[10];   // Dia da semana (ex: 2feira)
+    char data[10]; // Data no formato DD.MM.AAAA
+    struct {
+        char nome[50]; // Nome do prato de carne
+        int calorias;  // Calorias do prato de carne
+    } prato_carne;
+    struct {
+        char nome[50]; // Nome do prato de peixe
+        int calorias;  // Calorias do prato de peixe
+    } prato_peixe;
+} Ementa;
+\end{lstlisting}
+\noindent
+A estrutura do nó da lista encadeada para ementas é definida da seguinte forma:
+\begin{lstlisting}[caption={Estrutura do Nó da Lista de Ementas},label=lst:noEmenta]
+typedef struct NodeEmenta {
+    Ementa ementa;
+    struct NodeEmenta* prox;
+} NodeEmenta;
+\end{lstlisting}
+
+\subsection{Estrutura de Escolhas}
+As escolhas dos utentes são registadas usando:
+
+\begin{lstlisting}[caption={Estrutura de dados para Escolhas},label=lst:escolha]
+typedef struct {
+    char dia[10];         // Dia da semana (ex: 2feira)
+    int num_funcionario;    // Número do funcionário
+    char tipo_prato;     // 'C' para carne, 'P' para peixe
+} Escolha;
+\end{lstlisting}
+\noindent
+A estrutura do nó da lista encadeada para escolhas é definida da seguinte forma:
+\begin{lstlisting}[caption={Estrutura do Nó da Lista de Escolhas},label=lst:noEscolha]
+typedef struct NodeEscolha {
+    Escolha escolha;
+    struct NodeEscolha* prox;
+} NodeEscolha;
+\end{lstlisting}
+
+\chapter{Implementação}
+\section{Organização do Código}
+O código fonte está organizado em vários ficheiros:
+\begin{itemize}
+    \item \texttt{estruturas.h}: Definição das estruturas de dados principais
+    \item \texttt{funcoes.c}: Implementação das funções principais
+    \item \texttt{main.c}: Programa principal e interface com utilizador
+\end{itemize}
+
+\subsection{Estruturas de Dados}
+As principais estruturas implementadas são:
+\begin{itemize}
+    \item \textbf{Funcionario}: Armazena dados dos funcionários (número, nome, NIF, telefone).
+    \item \textbf{Ementa}: Mantém informações das refeições (dia da semana, data, nome e calorias dos pratos).
+    \item \textbf{Escolha}: Regista escolhas de refeições (dia da semana, número do funcionário, tipo de prato ('C' para carne, 'P' para peixe)).
+\end{itemize}
+
+\subsection{Funções Principais}
+\begin{itemize}
+    \item \textbf{Gestão de Funcionários}:
+    \begin{itemize}
+       \item \texttt{carregarFuncionarios}: Carrega os dados dos funcionários do ficheiro (O(n)). Esta função lê o ficheiro especificado, processa cada linha para extrair os dados do funcionário e cria um novo nó na lista encadeada de funcionários. Retorna o primeiro nó da lista.
+        \item \texttt{criarNoFunc}: Cria um novo nó da lista de funcionários (O(1)). Esta função aloca dinamicamente a memória para um novo nó da lista de funcionários e inicializa seus campos com os dados do funcionário passados como parâmetro.
+    \end{itemize}
+    \item \textbf{Gestão de Ementas}:
+    \begin{itemize}
+        \item \texttt{carregarEmentas}: Carrega os dados das ementas do ficheiro (O(n)). Esta função lê o ficheiro especificado, processa cada linha para extrair os dados da ementa e cria um novo nó na lista encadeada de ementas. Retorna o primeiro nó da lista.
+    \end{itemize}
+    \item \textbf{Gestão de Escolhas}:
+    \begin{itemize}
+        \item \texttt{carregarEscolhas}: Carrega os dados das escolhas do ficheiro (O(n)). Esta função lê o ficheiro especificado, processa cada linha para extrair os dados de escolha do funcionário e cria um novo nó na lista encadeada de escolhas. Retorna o primeiro nó da lista.
+      \end{itemize}
+\end{itemize}
+
+\subsection{Gestão de Memória}
+\begin{itemize}
+    \item Alocação dinâmica para todas as estruturas usando \texttt{malloc}.
+    \item Libertação adequada de memória ao finalizar o programa através da função \texttt{liberarMemoria}.
+    \item A verificação de erros em operações de memória é realizada através da comparação do resultado da função \texttt{fopen} com \texttt{NULL}.
+\end{itemize}
+
+\subsection{Validações}
+\begin{itemize}
+    \item O programa valida se os arquivos foram abertos com sucesso através da função \texttt{fopen}, retornando NULL caso a abertura do ficheiro falhe.
+    \item A escolha das opções do menu é validada através da comparação da entrada do utilizador com os casos definidos no \texttt{switch} da função \texttt{main}.
+    \item  No carregamento de dados dos ficheiros, nenhuma validação dos dados é realizada, apenas é feita a leitura e o seu armazenamento nas estruturas.
+     \item Os dados introduzidos pelo utilizador (dia da semana, data inicial e final) são lidos através da função \texttt{scanf}.
+\end{itemize}
+
+\begin{figure}[htb]
+    \centering
+    \begin{tabular}{|l|p{10cm}|}
+        \hline
+        \textbf{Ficheiro} & \textbf{Responsabilidade} \\
+        \hline
+        main.c & Interface com utilizador, menu principal e controlo de fluxo do programa \\
+        \hline
+         estruturas.h & Definição das estruturas de dados e tipos utilizados, além de protótipos das funções \\
+        \hline
+        funcoes.c & Implementação das operações principais do sistema \\
+        \hline
+    \end{tabular}
+    \caption{Organização dos ficheiros do projeto}
+    \label{fig:ficheiros}
+\end{figure}
+
+\subsection{Principais Algoritmos}
+As principais operações são baseadas em percursos nas listas ligadas.
+
+\subsubsection{Carregamento de Dados}
+O sistema implementa um algoritmo que percorre o ficheiro de dados linha a linha.
+
+\begin{lstlisting}[caption={Algoritmo de carregamento de dados},label=lst:carregar]
+NodeFunc* carregarFuncionarios(const char* filename) {
+    NodeFunc* head = NULL;
+    NodeFunc* atual = NULL;
+    FILE* file = fopen(filename, "r");
+    char linha[256];
+    
+    if (file == NULL) {
+        printf("Erro ao abrir ficheiro %s\n", filename);
+        return NULL;
+    }
+    
+    while (fgets(linha, sizeof(linha), file)) {
+        Funcionario func;
+        // Parse da linha
+        // Criar novo nó e inserir na lista
+        if(parseLinha(linha, &func)){
+            NodeFunc* novoNo = criarNoFunc(func);
+            if (!head) {
+                head = novoNo;
+                atual = novoNo;
+            } else {
+                atual->prox = novoNo;
+                atual = novoNo;
+            }
+        }
+    }
+    
+    fclose(file);
+    return head;
+}
+\end{lstlisting}
+Este algoritmo, implementado na função \texttt{carregarFuncionarios}, inicia com a abertura do ficheiro especificado. Caso o ficheiro não possa ser aberto, retorna NULL. Em seguida, percorre linha a linha, usando a função \texttt{fgets}. Cada linha é lida, e um novo nó é criado e inserido na lista encadeada. A função retorna o primeiro nó da lista.
+
+\subsubsection{Cálculo de Estatísticas}
+O cálculo de médias é feito através de uma interação pelas listas de ementas e escolhas, de forma a que seja calculada a média de calorias por dia.
+
+\begin{lstlisting}[caption={Algoritmo de cálculo de médias},label=lst:medias]
+void calcularMediasCalorias(NodeEmenta* ementas, NodeEscolha* escolhas,
+                           const char* data_inicio, const char* data_fim) {
+    // Para cada dia
+    NodeEmenta* ementa = ementas;
+    while (ementa) {
+        int total_calorias = 0;
+        int num_refeicoes = 0;
+        NodeEscolha* escolha = escolhas;
+        while (escolha) {
+            if (strcmp(escolha->escolha.dia, ementa->ementa.dia) == 0) {
+                if (escolha->escolha.tipo_prato == 'C')
+                    total_calorias += ementa->ementa.prato_carne.calorias;
+                else
+                    total_calorias += ementa->ementa.prato_peixe.calorias;
+                num_refeicoes++;
+            }
+            escolha = escolha->prox;
+        }
+        //Calcula e exibe a média
+        if (num_refeicoes > 0) {
+            float media = (float)total_calorias / num_refeicoes;
+            printf("%-6s | %.2f\n", ementa->ementa.dia, media);
+        }
+        ementa = ementa->prox;
+    }
+}
+\end{lstlisting}
+Este algoritmo, implementado na função \texttt{calcularMediasCalorias}, itera pela lista de ementas, e para cada dia, percorre a lista de escolhas para calcular o total de calorias consumidas, utilizando os dados de calorias dos pratos da ementa. Em seguida, calcula a média de calorias para aquele dia, apresentando o resultado no output.
+
+\chapter{Exemplos de Uso do Sistema}
+\section{Operações Básicas}
+\subsection{Registo de Funcionário}
+Exemplo de como adicionar um novo funcionário ao sistema:
+
+\begin{lstlisting}[caption={Exemplo de Registo de funcionário},label=lst:exemplo_registo_func]
+// Dados do novo funcionário (este código é apenas exemplificativo, as informações são carregadas de ficheiros)
+int numero = 1001;
+char nome[] = "João Silva";
+int nif = 123456789;
+int telefone = 912345678;
+
+// O novo nó é criado e adicionado à lista através da função carregarFuncionarios
+\end{lstlisting}
+Este excerto de código demonstra como os dados de um funcionário (número, nome, NIF e telefone) são estruturados e carregados através do ficheiro \texttt{pessoas.txt} para a lista de funcionários, utilizando a função \texttt{carregarFuncionarios}.
+
+\subsection{Registo de Ementa}
+Exemplo de como registar uma nova ementa:
+
+\begin{lstlisting}[caption={Exemplo de registo de ementa},label=lst:exemplo_ementa_reg]
+// Dados da nova ementa (este código é apenas exemplificativo, as informações são carregadas de ficheiros)
+char dia[] = "2feira";
+char data[] = "05.01.2025";
+char prato_carne[] = "Bacalhau à Brás";
+int calorias_carne = 850;
+char prato_peixe[] = "Salmão Grelhado";
+int calorias_peixe = 700;
+// O novo nó é criado e adicionado à lista através da função carregarEmentas
+\end{lstlisting}
+Este exemplo ilustra como os dados de uma ementa (dia da semana, data e nome e calorias do prato de carne e peixe) são estruturados e carregados através do ficheiro \texttt{ementas.txt} para a lista de ementas, utilizando a função \texttt{carregarEmentas}.
+
+\subsection{Registo de Escolha}
+Exemplo de como registar a escolha de um funcionário:
+
+\begin{lstlisting}[caption={Exemplo de registo de escolha},label=lst:exemplo_escolha_reg]
+// Dados da escolha (este código é apenas exemplificativo, as informações são carregadas de ficheiros)
+char dia[] = "2feira";
+int num_func = 1001;
+char tipo_prato = 'C'; // 'C' para carne e 'P' para peixe
+
+// A nova escolha é adicionada à lista através da função carregarEscolhas
+\end{lstlisting}
+Este excerto de código mostra como os dados de escolha do funcionário (dia da semana, número do funcionário e tipo de prato) são estruturados e carregados através do ficheiro \texttt{menu\textunderscore escolhido.txt} para a lista de escolhas, utilizando a função \texttt{carregarEscolhas}.
+
+\section{Casos de Uso Completos}
+\subsection{Gestão Diária de Refeições}
+Exemplo de como o sistema pode ser usado para listar as refeições de um dia:
+
+Primeiro, os ficheiros \texttt{pessoas.txt}, \texttt{ementas.txt} e \texttt{menu\textunderscore escolhido.txt} são preenchidos da seguinte forma:
+
+\subsubsection{pessoas.txt}
+\begin{lstlisting}[caption={Exemplo do ficheiro pessoas.txt},label=lst:pessoas_txt]
+1;João Silva;123456789;912345678
+2;Maria Santos;987654321;923456789
+3;Pedro Costa;456789123;934567890
+\end{lstlisting}
+Este ficheiro contém dados de exemplo para três funcionários, no formato: \texttt{numero;nome;nif;telefone}.
+
+\subsubsection{ementas.txt}
+\begin{lstlisting}[caption={Exemplo do ficheiro ementas.txt},label=lst:ementas_txt]
+2feira;05.01.2025;Bacalhau à Brás;850;Salmão Grelhado;700
+3feira;06.01.2025;Bife com Arroz;950;Pescada Cozida;600
+4feira;07.01.2025;Frango Assado;750;Dourada Grelhada;800
+\end{lstlisting}
+Este ficheiro contém dados de exemplo para as ementas de três dias da semana, no formato: \texttt{dia;data;prato\textunderscore carne;calorias\textunderscore carne;prato\textunderscore peixe;calorias\textunderscore peixe}.
+
+\subsubsection{menu\textunderscore escolhido.txt}
+\begin{lstlisting}[caption={Exemplo do ficheiro menu\textunderscore escolhido.txt},label=lst:menu_txt]
+2feira;1;C
+2feira;2;P
+2feira;3;C
+3feira;1;C
+3feira;2;P
+\end{lstlisting}
+Este ficheiro contém dados de exemplo para as escolhas dos funcionários, no formato: \texttt{dia;num\textunderscore funcionario;tipo\textunderscore prato}.
+
+De seguida, o programa é executado e no menu principal, é escolhida a opção 4 e de seguida é pedido o dia da semana, o utilizador insere \texttt{2feira} e o output na consola é:
+\begin{lstlisting}[caption={Exemplo de output na consola},label=lst:consola_ex]
++============================================+
+|        Refeicoes para 2feira          |
++============================================+
+| Func. | Nome                 | Prato       |
++--------+----------------------+------------+
+| 1      | João Silva           | Bacalhau à Brás |
+| 2      | Maria Santos         | Salmão Grelhado|
+| 3      | Pedro Costa          | Bacalhau à Brás |
++--------+----------------------+------------+
+Total de refeicoes para 2feira: 3
++============================================+
+\end{lstlisting}
+Este é um exemplo do output do programa, após o utilizador inserir a opção 4 e inserir o dia da semana "2feira". O programa lista as refeições para esse dia específico, mostrando o número do funcionário, o nome e o prato escolhido.
+
+
+\chapter{Conclusão}
+O desenvolvimento deste sistema trouxe diversas contribuições importantes:
+\begin{itemize}
+    \item Implementação de um sistema completo de gestão de refeições.
+    \item Utilização de estruturas de dados dinâmicas para gerir informações.
+    \item Desenvolvimento de algoritmos para processamento de dados.
+    \item Aplicação prática de conceitos de programação em C.
+\end{itemize}
+
+\section{Desafios Encontrados}
+Durante o desenvolvimento, encontrámos vários desafios:
+\begin{itemize}
+    \item Gestão de memória em estruturas dinâmicas.
+    \item Validação e tratamento de dados de entrada.
+    \item Implementação de algoritmos.
+    \item Manipulação de ficheiros.
+\end{itemize}
+
+\section{Valor Acrescentado}
+O projeto proporcionou várias melhorias em relação à versão anterior:
+\begin{itemize}
+    \item Melhor organização do código.
+    \item Interface mais intuitiva.
+    \item Maior eficiência no processamento de dados.
+    \item Melhor gestão de memória.
+\end{itemize}
+
+\section{Trabalho Futuro}
+Para futuras versões do sistema, sugerimos:
+\begin{itemize}
+    \item Implementação de uma interface gráfica.
+    \item Adição de funcionalidades de exportação de relatórios.
+    \item Otimização adicional dos algoritmos de pesquisa.
+    \item Implementação de um sistema de cópias de segurança automáticas.
+\end{itemize}
+
+\end{document}

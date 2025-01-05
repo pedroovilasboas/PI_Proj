@@ -1,21 +1,22 @@
 # Sistema de Gestão do Espaço Social 🏢
 
 ## 📋 Índice
-- [Sobre o Projeto](#sobre-o-projeto)
+- [Sobre o Projecto](#sobre-o-projecto)
 - [Funcionalidades](#funcionalidades)
-- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Estrutura do Projecto](#estrutura-do-projecto)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação e Execução](#instalação-e-execução)
+- [Documentação](#documentação)
 - [Equipa](#equipa)
 
-## 🎯 Sobre o Projeto
-Este projeto foi desenvolvido no âmbito da cadeira de Programação Imperativa do curso de Engenharia de Sistemas Informáticos no Instituto Politécnico do Cávado e do Ave. Consiste num sistema de gestão para um espaço social, permitindo a administração eficiente de funcionários, ementas e escolhas de refeições.
+## 🎯 Sobre o Projecto
+Este projecto foi desenvolvido no âmbito da unidade curricular de Laboratórios de Informática do curso de Engenharia de Sistemas Informáticos no Instituto Politécnico do Cávado e do Ave. Consiste num sistema de gestão para um espaço social, permitindo a administração eficiente de funcionários, ementas e escolhas de refeições.
 
 ## ⚙️ Funcionalidades
 ### Gestão de Funcionários
 - Registo e gestão de dados dos funcionários
 - Consulta de informações pessoais
-- Atualização de registos
+- Actualização de registos
 
 ### Gestão de Ementas
 - Carregamento de ementas semanais
@@ -29,25 +30,47 @@ Este projeto foi desenvolvido no âmbito da cadeira de Programação Imperativa 
 - Relatórios por intervalo de datas
 - Estatísticas semanais
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do Projecto
 ```
-projeto/
+projecto/
 ├── src/                    # Código fonte
 │   ├── main.c             # Ficheiro principal
-│   ├── funcionarios.c     # Gestão de funcionários
-│   ├── ementas.c         # Gestão de ementas
-│   └── refeicoes.c       # Gestão de refeições
-├── include/               # Ficheiros de cabeçalho
-├── data/                 # Ficheiros de dados
+│   ├── estruturas.h       # Definições das estruturas
+│   └── funcoes.c          # Implementação das funções
+├── dados/                 # Ficheiros de dados
+│   ├── pessoas.txt       # Dados dos funcionários
+│   ├── ementas.txt      # Dados das ementas
+│   └── menu_escolhido.txt # Registo de escolhas
 └── docs/                 # Documentação
+    └── Relatorio LaTeX/  # Relatório técnico em LaTeX
+        ├── Relatorio.tex # Ficheiro fonte do relatório
+        └── Relatorio.pdf # Relatório compilado
 ```
 
 ## 🛠️ Tecnologias Utilizadas
 - Linguagem C
 - Bibliotecas standard C
-- Estruturas de dados personalizadas
+- Estruturas de dados dinâmicas (listas ligadas)
 - Sistema de ficheiros para persistência de dados
+- LaTeX para documentação técnica
 
+
+### Estrutura do Relatório
+- **Resumo**: Visão geral do projecto
+- **Introdução**: Objectivos e descrição do sistema
+- **Desenvolvimento**: Descrição detalhada do problema e implementação
+- **Implementação**: Detalhes técnicos e algoritmos utilizados
+- **Exemplos de Uso**: Casos práticos de utilização do sistema
+- **Conclusão**: Contribuições, desafios e trabalho futuro
+
+### Compilação do Relatório
+Para compilar o relatório LaTeX:
+1. Instale uma distribuição TeX (por exemplo, MiKTeX)
+2. Navegue até à pasta do relatório
+3. Comando:
+   
+   pdflatex Relatorio.tex
+  
 
 ## 👥 Equipa
 - Pedro Vilas Boas (nº25453)
@@ -56,5 +79,5 @@ projeto/
 ## 📝 Notas Adicionais
 - O sistema foi desenvolvido com foco na eficiência e facilidade de utilização
 - Implementa boas práticas de programação e gestão de memória
-- Inclui validação de dados e tratamento de erros.
-
+- Inclui validação de dados e tratamento de erros
+- Documentação técnica completa disponível no relatório em LaTeX

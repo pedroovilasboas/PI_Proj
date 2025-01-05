@@ -42,21 +42,21 @@ Este projecto foi desenvolvido no âmbito da unidade curricular de Laboratórios
 
 ### Pré-requisitos
 1. **MinGW (para Windows)**
-   - Faça download do [MinGW Installer](https://sourceforge.net/projects/mingw/)
-   - Durante a instalação, selecione:
+   - Download do [MinGW Installer](https://sourceforge.net/projects/mingw/)
+   - Durante a instalação, selecionar:
      - mingw32-base
      - mingw32-gcc-g++
      - mingw32-make
-   - Adicione o MinGW ao PATH do sistema:
-     1. Abra o Painel de Controle
+   - Adicionar o MinGW ao PATH do sistema:
+     1. Abrir o Painel de Controlo
      2. Sistema e Segurança > Sistema
-     3. Configurações avançadas do sistema
+     3. Configurações avançadas de sistema
      4. Variáveis de ambiente
-     5. Em "Variáveis do sistema", encontre PATH
-     6. Adicione: `C:\MinGW\bin`
+     5. Em "Variáveis do sistema", encontrar PATH
+     6. Adicionar: `C:\MinGW\bin`
 
 2. **MiKTeX (para compilar o relatório)**
-   - Faça download e instale o [MiKTeX](https://miktex.org/download)
+   - Download e instalar o [MiKTeX](https://miktex.org/download)
 
 ### Compilação e Execução
 
@@ -66,7 +66,7 @@ O projeto possui dois Makefiles:
 
 #### Compilar o Programa (pasta src)
 ```bash
-# Navegue até a pasta src
+# Naveguar até a pasta src
 cd src
 
 # Compilar o programa
@@ -84,7 +84,7 @@ mingw32-make run
 
 #### Compilar o Relatório (pasta doc/Relatorio LaTeX)
 ```bash
-# Navegue até a pasta do relatório
+# Naveguar até a pasta do relatório
 cd doc/Relatorio\ LaTeX
 
 # Compilar o PDF
@@ -97,7 +97,7 @@ mingw32-make clean
 mingw32-make rebuild
 ```
 
-**Nota**: No Windows, usar `mingw32-make` em vez de apenas `make`. Para caminhos com espaços, use aspas ou escape com `\`.
+**Nota**: No Windows, usar `mingw32-make` em vez de apenas `make`
 
 ### 📁 Estrutura do Projeto
 ```

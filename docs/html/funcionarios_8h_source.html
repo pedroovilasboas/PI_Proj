@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de Gestão do Espaço Social: Código-Fonte de src/funcionarios.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema de Gestão do Espaço Social<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema para gestão de refeições e funcionários</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('funcionarios_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">funcionarios.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="funcionarios_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef FUNCIONARIOS_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define FUNCIONARIOS_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_funcionario.html">   18</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_funcionario.html#a228840806049ffddabd82177b5b6be82">   19</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_funcionario.html#a228840806049ffddabd82177b5b6be82">numero</a>;         </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_funcionario.html#a96c6052616d5e7da1dc65f6633872abd">   20</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_funcionario.html#a96c6052616d5e7da1dc65f6633872abd">nome</a>[100];     </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_funcionario.html#a716cc49288ca3bf62128ddc40a468842">   21</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_funcionario.html#a716cc49288ca3bf62128ddc40a468842">nif</a>[10];       </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_funcionario.html#a27f11b9571d2ecfe21f47aa56f098e0e">   22</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_funcionario.html#a27f11b9571d2ecfe21f47aa56f098e0e">telefone</a>[15];  </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <a class="code hl_struct" href="struct_funcionario.html">Funcionario</a>;</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_node_func.html">   28</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_node_func.html#ab421b9e64e2c9984f7a0f6418c2dbbb8">   29</a></span>    <a class="code hl_struct" href="struct_funcionario.html">Funcionario</a> <a class="code hl_variable" href="struct_node_func.html#ab421b9e64e2c9984f7a0f6418c2dbbb8">func</a>;           </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_node_func.html#aa5d9dd10ec6c89c995afe8c95ebadb4c">   30</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* <a class="code hl_variable" href="struct_node_func.html#aa5d9dd10ec6c89c995afe8c95ebadb4c">prox</a>;      </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="funcionarios_8h.html#a0a1562228b73576987bdd1f62a3a8760">   31</a></span>} <a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>;</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* <a class="code hl_function" href="funcionarios_8h.html#aed0de4f7fab8605405ab6cdb09831a30">criarNoFunc</a>(<a class="code hl_struct" href="struct_funcionario.html">Funcionario</a> <a class="code hl_variable" href="struct_node_func.html#ab421b9e64e2c9984f7a0f6418c2dbbb8">func</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="funcionarios_8h.html#ac57199801aa2ad636321fc40bf8d908b">   46</a></span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* <a class="code hl_function" href="funcionarios_8h.html#ac57199801aa2ad636321fc40bf8d908b">carregarFuncionarios</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <span class="keywordtype">int</span> formato_tab);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="funcionarios_8h.html#a2fa5a89fe9e47ab434719cd565709156">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="funcionarios_8h.html#a2fa5a89fe9e47ab434719cd565709156">listarFuncionarios</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* lista);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="funcionarios_8h.html#ae28fe8960fe5b1cbe4399f2612d68538">   60</a></span><a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* <a class="code hl_function" href="funcionarios_8h.html#ae28fe8960fe5b1cbe4399f2612d68538">buscarFuncionario</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* lista, <span class="keywordtype">int</span> numero);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="funcionarios_8h.html#a8366e65842e4ba71abd6f0cf149604fe">   66</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="funcionarios_8h.html#a8366e65842e4ba71abd6f0cf149604fe">liberarFuncionarios</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* lista);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="funcionarios_8h.html#a65e56551f7052fc12dcbb0e61c441d9c">   75</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="funcionarios_8h.html#a65e56551f7052fc12dcbb0e61c441d9c">salvarFuncionarios</a>(<a class="code hl_struct" href="struct_node_func.html">NodeFunc</a>* lista, <span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <span class="keywordtype">int</span> formato_bin);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">/* FUNCIONARIOS_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="afuncionarios_8h_html_a2fa5a89fe9e47ab434719cd565709156"><div class="ttname"><a href="funcionarios_8h.html#a2fa5a89fe9e47ab434719cd565709156">listarFuncionarios</a></div><div class="ttdeci">void listarFuncionarios(NodeFunc *lista)</div><div class="ttdoc">Lista todos os funcionários cadastrados.</div></div>
+<div class="ttc" id="afuncionarios_8h_html_a65e56551f7052fc12dcbb0e61c441d9c"><div class="ttname"><a href="funcionarios_8h.html#a65e56551f7052fc12dcbb0e61c441d9c">salvarFuncionarios</a></div><div class="ttdeci">int salvarFuncionarios(NodeFunc *lista, const char *filename, int formato_bin)</div><div class="ttdoc">Salva a lista de funcionários em arquivo.</div></div>
+<div class="ttc" id="afuncionarios_8h_html_a8366e65842e4ba71abd6f0cf149604fe"><div class="ttname"><a href="funcionarios_8h.html#a8366e65842e4ba71abd6f0cf149604fe">liberarFuncionarios</a></div><div class="ttdeci">void liberarFuncionarios(NodeFunc *lista)</div><div class="ttdoc">Libera a memória alocada para a lista de funcionários.</div></div>
+<div class="ttc" id="afuncionarios_8h_html_ac57199801aa2ad636321fc40bf8d908b"><div class="ttname"><a href="funcionarios_8h.html#ac57199801aa2ad636321fc40bf8d908b">carregarFuncionarios</a></div><div class="ttdeci">NodeFunc * carregarFuncionarios(const char *filename, int formato_tab)</div><div class="ttdoc">Carrega funcionários de um arquivo.</div></div>
+<div class="ttc" id="afuncionarios_8h_html_ae28fe8960fe5b1cbe4399f2612d68538"><div class="ttname"><a href="funcionarios_8h.html#ae28fe8960fe5b1cbe4399f2612d68538">buscarFuncionario</a></div><div class="ttdeci">NodeFunc * buscarFuncionario(NodeFunc *lista, int numero)</div><div class="ttdoc">Busca um funcionário pelo número.</div></div>
+<div class="ttc" id="afuncionarios_8h_html_aed0de4f7fab8605405ab6cdb09831a30"><div class="ttname"><a href="funcionarios_8h.html#aed0de4f7fab8605405ab6cdb09831a30">criarNoFunc</a></div><div class="ttdeci">NodeFunc * criarNoFunc(Funcionario func)</div><div class="ttdoc">Cria um novo nó de funcionário.</div><div class="ttdef"><b>Definição</b> funcoes.c:16</div></div>
+<div class="ttc" id="astruct_funcionario_html"><div class="ttname"><a href="struct_funcionario.html">Funcionario</a></div><div class="ttdoc">Estrutura que representa um funcionário.</div><div class="ttdef"><b>Definição</b> funcionarios.h:18</div></div>
+<div class="ttc" id="astruct_funcionario_html_a228840806049ffddabd82177b5b6be82"><div class="ttname"><a href="struct_funcionario.html#a228840806049ffddabd82177b5b6be82">Funcionario::numero</a></div><div class="ttdeci">int numero</div><div class="ttdef"><b>Definição</b> funcionarios.h:19</div></div>
+<div class="ttc" id="astruct_funcionario_html_a27f11b9571d2ecfe21f47aa56f098e0e"><div class="ttname"><a href="struct_funcionario.html#a27f11b9571d2ecfe21f47aa56f098e0e">Funcionario::telefone</a></div><div class="ttdeci">char telefone[15]</div><div class="ttdef"><b>Definição</b> funcionarios.h:22</div></div>
+<div class="ttc" id="astruct_funcionario_html_a716cc49288ca3bf62128ddc40a468842"><div class="ttname"><a href="struct_funcionario.html#a716cc49288ca3bf62128ddc40a468842">Funcionario::nif</a></div><div class="ttdeci">char nif[10]</div><div class="ttdef"><b>Definição</b> funcionarios.h:21</div></div>
+<div class="ttc" id="astruct_funcionario_html_a96c6052616d5e7da1dc65f6633872abd"><div class="ttname"><a href="struct_funcionario.html#a96c6052616d5e7da1dc65f6633872abd">Funcionario::nome</a></div><div class="ttdeci">char nome[100]</div><div class="ttdef"><b>Definição</b> funcionarios.h:20</div></div>
+<div class="ttc" id="astruct_node_func_html"><div class="ttname"><a href="struct_node_func.html">NodeFunc</a></div><div class="ttdoc">Estrutura de nó para lista ligada de funcionários.</div><div class="ttdef"><b>Definição</b> funcionarios.h:28</div></div>
+<div class="ttc" id="astruct_node_func_html_aa5d9dd10ec6c89c995afe8c95ebadb4c"><div class="ttname"><a href="struct_node_func.html#aa5d9dd10ec6c89c995afe8c95ebadb4c">NodeFunc::prox</a></div><div class="ttdeci">struct NodeFunc * prox</div><div class="ttdef"><b>Definição</b> funcionarios.h:30</div></div>
+<div class="ttc" id="astruct_node_func_html_ab421b9e64e2c9984f7a0f6418c2dbbb8"><div class="ttname"><a href="struct_node_func.html#ab421b9e64e2c9984f7a0f6418c2dbbb8">NodeFunc::func</a></div><div class="ttdeci">Funcionario func</div><div class="ttdef"><b>Definição</b> funcionarios.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="funcionarios_8h.html">funcionarios.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.1 </li>
+  </ul>
+</div>
+</body>
+</html>

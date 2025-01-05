@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['liberarfuncionarios_0',['liberarFuncionarios',['../funcionarios_8h.html#a8366e65842e4ba71abd6f0cf149604fe',1,'funcionarios.h']]],
+  ['liberarmemoria_1',['liberarMemoria',['../estruturas_8h.html#a16f639c0af4d6573c22a3f68b28d38f0',1,'liberarMemoria(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas):&#160;funcoes.c'],['../funcoes_8c.html#a16f639c0af4d6573c22a3f68b28d38f0',1,'liberarMemoria(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas):&#160;funcoes.c']]],
+  ['limparbuffer_2',['limparBuffer',['../main_8c.html#aa4babdda3b35e146a545f567fcd13fb3',1,'main.c']]],
+  ['listarfuncionarios_3',['listarFuncionarios',['../funcionarios_8h.html#a2fa5a89fe9e47ab434719cd565709156',1,'funcionarios.h']]],
+  ['listarrefeicoescalorias_4',['listarRefeicoesCalorias',['../estruturas_8h.html#a05c36012fd60deb0f410fd594d246bd2',1,'listarRefeicoesCalorias(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas, int num_funcionario, const char *data_inicio, const char *data_fim):&#160;funcoes.c'],['../funcoes_8c.html#a05c36012fd60deb0f410fd594d246bd2',1,'listarRefeicoesCalorias(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas, int num_funcionario, const char *data_inicio, const char *data_fim):&#160;funcoes.c']]],
+  ['listarrefeicoesdia_5',['listarRefeicoesDia',['../estruturas_8h.html#a8c4698ced44ca34af8f4cbab08e93096',1,'listarRefeicoesDia(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas, const char *dia):&#160;funcoes.c'],['../funcoes_8c.html#a8c4698ced44ca34af8f4cbab08e93096',1,'listarRefeicoesDia(NodeFunc *funcionarios, NodeEmenta *ementas, NodeEscolha *escolhas, const char *dia):&#160;funcoes.c']]],
+  ['listarutentesordenados_6',['listarUtentesOrdenados',['../estruturas_8h.html#a895e7d30b3783289353cf0058a9b4599',1,'listarUtentesOrdenados(NodeFunc *funcionarios, NodeEscolha *escolhas):&#160;funcoes.c'],['../funcoes_8c.html#a895e7d30b3783289353cf0058a9b4599',1,'listarUtentesOrdenados(NodeFunc *funcionarios, NodeEscolha *escolhas):&#160;funcoes.c']]]
+];

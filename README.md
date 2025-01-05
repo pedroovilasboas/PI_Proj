@@ -30,21 +30,6 @@ Este projecto foi desenvolvido no âmbito da unidade curricular de Laboratórios
 - Relatórios por intervalo de datas
 - Estatísticas semanais
 
-### 📁 Estrutura do Projeto
-```
-.
-├── doc/                    # Documentação com o relatório
-│   └── Relatorio LaTeX/   # Relatório em LaTeX
-│       ├── Relatorio.tex  # Código fonte do relatório
-│       └── Makefile       # Makefile para compilar o relatório
-├── doxdoc/                # Documentação gerada pelo Doxygen
-└── src/                   # Código fonte da solução
-    ├── include/           # Arquivos de cabeçalho (.h)
-    ├── lib/               # Bibliotecas
-    ├── Makefile          # Makefile para compilar o programa
-    └── build/            # Arquivos compilados (gerado automaticamente)
-```
-
 
 ## 🛠️ Tecnologias Utilizadas
 - Linguagem C
@@ -112,7 +97,7 @@ mingw32-make clean
 mingw32-make rebuild
 ```
 
-**Nota**: No Windows, use `mingw32-make` em vez de apenas `make`. Para caminhos com espaços, use aspas ou escape com `\`.
+**Nota**: No Windows, usar `mingw32-make` em vez de apenas `make`. Para caminhos com espaços, use aspas ou escape com `\`.
 
 ### 📁 Estrutura do Projeto
 ```

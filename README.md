@@ -31,7 +31,6 @@ Este projecto foi desenvolvido no âmbito da unidade curricular de Laboratórios
 - Estatísticas semanais
 
 ## 📁 Estrutura do Projecto
-```
 projecto/
 ├── src/                    # Código fonte
 │   ├── main.c             # Ficheiro principal
@@ -45,7 +44,6 @@ projecto/
     └── Relatorio LaTeX/  # Relatório técnico em LaTeX
         ├── Relatorio.tex # Ficheiro fonte do relatório
         └── Relatorio.pdf # Relatório compilado
-```
 
 ## 🛠️ Tecnologias Utilizadas
 - Linguagem C
@@ -54,23 +52,81 @@ projecto/
 - Sistema de ficheiros para persistência de dados
 - LaTeX para documentação técnica
 
+## 📝 Instalação e Execução
 
-### Estrutura do Relatório
-- **Resumo**: Visão geral do projecto
-- **Introdução**: Objectivos e descrição do sistema
-- **Desenvolvimento**: Descrição detalhada do problema e implementação
-- **Implementação**: Detalhes técnicos e algoritmos utilizados
-- **Exemplos de Uso**: Casos práticos de utilização do sistema
-- **Conclusão**: Contribuições, desafios e trabalho futuro
+### Pré-requisitos
+1. **MinGW (para Windows)**
+   - Faça download do [MinGW Installer](https://sourceforge.net/projects/mingw/)
+   - Durante a instalação, selecione:
+     - mingw32-base
+     - mingw32-gcc-g++
+     - mingw32-make
+   - Adicione o MinGW ao PATH do sistema:
+     1. Abra o Painel de Controle
+     2. Sistema e Segurança > Sistema
+     3. Configurações avançadas do sistema
+     4. Variáveis de ambiente
+     5. Em "Variáveis do sistema", encontre PATH
+     6. Adicione: `C:\MinGW\bin`
 
-### Compilação do Relatório
-Para compilar o relatório LaTeX:
-1. Instale uma distribuição TeX (por exemplo, MiKTeX)
-2. Navegue até à pasta do relatório
-3. Comando:
-   
-   pdflatex Relatorio.tex
-  
+2. **MiKTeX (para compilar o relatório)**
+   - Faça download e instale o [MiKTeX](https://miktex.org/download)
+
+### Compilação e Execução
+
+O projeto possui dois Makefiles:
+1. `src/Makefile`: Para compilar o programa em C
+2. `doc/Relatorio LaTeX/Makefile`: Para compilar o relatório em LaTeX
+
+#### Compilar o Programa (pasta src)
+```bash
+# Navegue até a pasta src
+cd src
+
+# Compilar o programa
+mingw32-make
+
+# Limpar arquivos compilados
+mingw32-make clean
+
+# Recompilar todo o projeto
+mingw32-make rebuild
+
+# Compilar e executar
+mingw32-make run
+```
+
+#### Compilar o Relatório (pasta doc/Relatorio LaTeX)
+```bash
+# Navegue até a pasta do relatório
+cd doc/Relatorio\ LaTeX
+
+# Compilar o PDF
+mingw32-make
+
+# Limpar arquivos temporários
+mingw32-make clean
+
+# Recompilar o relatório
+mingw32-make rebuild
+```
+
+**Nota**: No Windows, use `mingw32-make` em vez de apenas `make`. Para caminhos com espaços, use aspas ou escape com `\`.
+
+### Estrutura do Projeto
+```
+.
+├── doc/                    # Documentação com o relatório
+│   └── Relatorio LaTeX/   # Relatório em LaTeX
+│       ├── Relatorio.tex  # Código fonte do relatório
+│       └── Makefile       # Makefile para compilar o relatório
+├── doxdoc/                # Documentação gerada pelo Doxygen
+└── src/                   # Código fonte da solução
+    ├── include/           # Arquivos de cabeçalho (.h)
+    ├── lib/               # Bibliotecas
+    ├── Makefile          # Makefile para compilar o programa
+    └── build/            # Arquivos compilados (gerado automaticamente)
+```
 
 ## 👥 Equipa
 - Pedro Vilas Boas (nº25453)

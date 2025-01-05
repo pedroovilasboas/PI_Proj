@@ -30,20 +30,21 @@ Este projecto foi desenvolvido no âmbito da unidade curricular de Laboratórios
 - Relatórios por intervalo de datas
 - Estatísticas semanais
 
-## 📁 Estrutura do Projecto
-projecto/
-├── src/                    # Código fonte
-│   ├── main.c             # Ficheiro principal
-│   ├── estruturas.h       # Definições das estruturas
-│   └── funcoes.c          # Implementação das funções
-├── dados/                 # Ficheiros de dados
-│   ├── pessoas.txt       # Dados dos funcionários
-│   ├── ementas.txt      # Dados das ementas
-│   └── menu_escolhido.txt # Registo de escolhas
-└── docs/                 # Documentação
-    └── Relatorio LaTeX/  # Relatório técnico em LaTeX
-        ├── Relatorio.tex # Ficheiro fonte do relatório
-        └── Relatorio.pdf # Relatório compilado
+### 📁 Estrutura do Projeto
+```
+.
+├── doc/                    # Documentação com o relatório
+│   └── Relatorio LaTeX/   # Relatório em LaTeX
+│       ├── Relatorio.tex  # Código fonte do relatório
+│       └── Makefile       # Makefile para compilar o relatório
+├── doxdoc/                # Documentação gerada pelo Doxygen
+└── src/                   # Código fonte da solução
+    ├── include/           # Arquivos de cabeçalho (.h)
+    ├── lib/               # Bibliotecas
+    ├── Makefile          # Makefile para compilar o programa
+    └── build/            # Arquivos compilados (gerado automaticamente)
+```
+
 
 ## 🛠️ Tecnologias Utilizadas
 - Linguagem C
@@ -113,7 +114,7 @@ mingw32-make rebuild
 
 **Nota**: No Windows, use `mingw32-make` em vez de apenas `make`. Para caminhos com espaços, use aspas ou escape com `\`.
 
-### Estrutura do Projeto
+### 📁 Estrutura do Projeto
 ```
 .
 ├── doc/                    # Documentação com o relatório
